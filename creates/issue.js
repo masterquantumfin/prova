@@ -3,7 +3,7 @@ const sample = require('../samples/sample_issue');
 const createIssue = (z, bundle) => {
   const responsePromise = z.request({
     method: 'POST',
-    url: `https://api.github.com/prova/${bundle.inputData.repo}/issues`,
+    url: `https://api.github.com/repos/${bundle.inputData.repo}/issues`,
     body: JSON.stringify({
       title: bundle.inputData.title
     })
