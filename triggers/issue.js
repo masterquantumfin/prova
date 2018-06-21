@@ -3,7 +3,7 @@ const sample = require('../samples/sample_issue');
 const triggerIssue = (z, bundle) => {
   const responsePromise = z.request({
     method: 'GET',
-    url: `https://api.github.com/prova/${bundle.inputData.repo}/issues`,
+    url: `https://api.github.com/repos/${bundle.inputData.repo}/issues`,
     params: {
       filter: bundle.inputData.filter,
       state: bundle.inputData.state,
